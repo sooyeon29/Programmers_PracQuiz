@@ -13,17 +13,14 @@ phone_number	return
 "027778888"	"*****8888"*/
 
 function solution(phone_number) {
-    var answer = '';
-    
+    // var answer = '';
    
-   let a = phone_number.substring(0,phone_number.length-4)
-   let star = a.replace(/[0-9]/g,'*')
-//    /[0-9]/g ---> 0~9사이 전역을 탐색
-    
-   let b = phone_number.substr(-4,4)
-   
-   answer = star+b
-    
+    let front = phone_number.substring(0,phone_number.length-4)
+    let star = front.replace(/[0-9]/g,'*')
+    // console.log(front)
+    let back = phone_number.substr(phone_number.length-4,4)
+    answer = star + back
+
     return answer;
 }
 

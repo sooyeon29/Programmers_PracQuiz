@@ -25,25 +25,16 @@ price	money	count	result
 같은 코드를 제출한 사람이 여럿이라면 코드를 가장 먼저 제출한 분께 상품을 드립니다.
 좋아요 수가 동일할 경우 코드를 가장 먼저 제출한 분께 상품을 드립니다.*/
 
-
+// *** map 함수 이용해보기!!
     function solution(price, money, count) {
         let answer = 0;
-        for ( let i = 1; i<=count; i++) {
+        for ( i = 0; i<=count; i++) {
             answer += price*i
-    } return answer < money ? 0 : answer -money;
-}
-console.log(solution(3,20,4))
-
-function solution(price, money, count) {
-    let answer = 0;
-for ( let i = 1; i<=count; i++) {
-    answer += price*i
-} 
-if (answer<money) {
-    return 0
-    
-} else {
-    answer = answer-money
-} return answer
+        }
+        if (answer < money) {
+            return 0
+        } else {
+            return answer-money
+        }        
 }
 console.log(solution(3,20,4))

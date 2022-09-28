@@ -11,9 +11,12 @@ n	return
 
 function solution(n) {
     var answer = [];
-    let word = String(n)
-    let arr = word.split('').reverse()
-    answer = arr.map(i => parseInt(i))
-    
+    let one = String(n).split("").reverse()
+    // console.log(one)
+    for (let i = 0 ; i<one.length; i++) {
+        answer.push(Number(one[i]))
+    }
     return answer;
 }
+
+console.log(solution(12345))

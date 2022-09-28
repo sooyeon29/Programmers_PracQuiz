@@ -11,10 +11,8 @@ n	return
 */
 
 function solution(n) {
-    var answer = 0;
-    let word = String(n).split('').sort((a,b) => (b-a))
-    answer = parseInt(word.join(''))
-    return answer;
+    
+   return String(n).split("").reverse().sort((a,b) => b-a).join('');
 }
 
 console.log(solution(118372))

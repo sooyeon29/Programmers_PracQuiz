@@ -14,32 +14,12 @@ x	n	answer
 -4	2	[-4, -8]
 */
 
+// *** map 함수 이용해보기!!
+
 function solution(x, n) {
-    var answer = [];
-    // 우선 처음x값 고정
-    let a = x
-    // 리스트를 순서대로 넣어주기 위하여 for문 사용
-    for (let i = 0; i<n; i++) {
-        // [] 안에 값을 하나씩 push해줌
-           answer.push(x) 
-           x += a
-        }
     
-    return answer;
-    }
-
-console.log(solution(2,5))
-console.log(solution(4,3))
-console.log(solution(-4,2))
-
-// =============다른풀이=======================================================
-
-function solution(x, n) {
-    var answer = [];
-    for (let i = 1; i <= n; i++) {
-        answer.push(x*i)
-    }
-    return answer;
+    
+    return Array(n).fill(x).map((x,i) => { return x*(i+1)})
 }
 
 console.log(solution(2,5))

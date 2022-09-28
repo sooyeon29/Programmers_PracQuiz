@@ -2,11 +2,11 @@
 
 function solution(num) {
     var answer = '';
-    if (num % 2 === 1) {
-         answer = 'Odd'
-    } else {
-         answer = 'Even'
-    }
+    if (num%2 === 0 ) {
+     answer = "Even"
+    } else { 
+     answer ="Odd"
+}
     return answer;
 }
 console.log(solution(3))

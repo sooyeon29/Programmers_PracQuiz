@@ -24,11 +24,11 @@ signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3�
 
 function solution(absolutes, signs) {
     var answer = 0;
-    for (let i = 0; i<absolutes.length; i++) {
-        if (signs[i] === true) {
-      answer = answer + absolutes[i]
+    for (i = 0 ; i<absolutes.length; i++) {
+        if ( signs[i] === true) {
+        answer +=absolutes[i]
     } else {
-        answer = answer - absolutes[i]
+        answer -=absolutes[i]
     }
     }
     return answer;

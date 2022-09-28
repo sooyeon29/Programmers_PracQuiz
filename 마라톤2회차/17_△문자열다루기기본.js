@@ -11,8 +11,6 @@ s	return
 */
 
 function solution(s) {
- 
-
   // 길이가 4 혹은 6이 아니면 false 반환
   if (s.length !== 4 && s.length !== 6) return false;
   // 각 자리중에 숫자가 아닌 것이 하나라도 있으면 false 반환
@@ -23,5 +21,6 @@ function solution(s) {
   // (길이가 4 혹은 6이고, 숫자로만 구성되어 있으면) true 반환
   return true;
 }
+
 
 console.log(solution("a234"))
