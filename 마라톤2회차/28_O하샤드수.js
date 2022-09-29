@@ -27,12 +27,19 @@ arr	return
 
 function solution(x) {
     var answer = 0;
-    var word = String(x).split(""); // [1,8]
+    let arr = String(x).split("")
+    for( let i=0; i<arr.length; i++) {
+        answer += parseInt(arr[i])
+}
+        if (x % answer == 0) {
+            return true
+        } else {
+            return false
+        }
     
-    for(let i=0; i<word.length; i++){
-        answer += Number(word[i]) // 1+8
-    }
-    return (x % answer == 0) ? true:false;
 }
 
 console.log(solution(10))
+console.log(solution(12))
+console.log(solution(11))
+console.log(solution(13))
